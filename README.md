@@ -20,7 +20,7 @@ O menu direciona às seções da página, recolhe em telas menores e indica a se
 
 O **filtro de projetos** usa atributos `data-filter` nos botões e `data-category` nos projetos. Um evento de clique em JavaScript compara as categorias, atualiza a propriedade `hidden`, informa a quantidade exibida e define `aria-pressed` para identificar o filtro ativo. Atualmente há um único projeto, que pertence às duas categorias; por isso, ele aparece nos três filtros. Novos projetos podem ter uma ou mais categorias.
 
-Também foram acrescentadas uma seção independente de habilidades e outra de formação, transições nos projetos e entrada discreta das seções com `IntersectionObserver`. A preferência por movimento reduzido é respeitada. O projeto da aula já incluía informações de habilidades e formação dentro do perfil; o filtro é a principal funcionalidade inédita em relação ao exemplo.
+O botão de tema alterna entre claro e escuro com variáveis CSS e JavaScript; a preferência é guardada em localStorage quando disponível. Também foram acrescentadas uma seção independente de habilidades e outra de formação, transições nos projetos e entrada discreta das seções com `IntersectionObserver`. A preferência por movimento reduzido é respeitada. O projeto da aula já incluía informações de habilidades e formação dentro do perfil; o filtro é a principal funcionalidade inédita em relação ao exemplo.
 
 ## Execução local
 
