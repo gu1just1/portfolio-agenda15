@@ -1,23 +1,32 @@
 # Portfólio pessoal — Guilherme Gomes Justi
 
-Portfólio desenvolvido para a Agenda 15 de Desenvolvimento de Sistemas I da ETEC, a partir da estrutura apresentada na aula. A página reúne perfil, projetos, habilidades e contato, com identidade visual inspirada no meu perfil do GitHub e seus GIFs retrô.
-
 **Aluno:** Guilherme Gomes Justi  
-**Site:** https://gu1just1.github.io/portfolio-agenda15/  
+**Site publicado:** https://gu1just1.github.io/portfolio-agenda15/  
 **Repositório:** https://github.com/gu1just1/portfolio-agenda15
+
+## Sobre
+
+Portfólio pessoal desenvolvido para a Agenda 15 de Desenvolvimento de Sistemas I da ETEC. Apresenta perfil, habilidades em estudo, projetos, formação e contato. A estrutura usa como ponto de partida os componentes do projeto da aula e uma composição editorial inspirada no Swissfolio.
 
 ## Tecnologias
 
-HTML5, CSS3, JavaScript e Bootstrap 5.3.3. Os arquivos do Bootstrap são carregados por CDN; os GIFs são carregados dos repositórios indicados nos seus endereços.
+HTML5, CSS3, JavaScript e Bootstrap 5.3.3. O CSS e o bundle JavaScript do Bootstrap são carregados por CDN.
 
-## Como funciona
+## Funcionamento
 
-O arquivo `index.html` contém o conteúdo da página. O menu direciona às seções Perfil, Projetos, Habilidades e Contato. A grade e o menu responsivo usam componentes do Bootstrap; os botões de contato abrem os respectivos canais. Para executar localmente, abra `index.html` no navegador com conexão à internet para carregar Bootstrap e GIFs.
+O menu direciona às seções da página, recolhe em telas menores e indica a seção ativa por meio do Scrollspy do Bootstrap. O grid adapta o conteúdo às diferentes larguras de tela. Links de contato abrem o e-mail, GitHub ou LinkedIn.
 
-## Recurso novo: alternância de tema
+## Recursos novos e implementação
 
-O botão **Modo escuro** alterna entre os temas claro e escuro. O JavaScript altera o atributo `data-theme` no elemento raiz e as variáveis CSS ajustam cores de fundo, texto e bordas. A escolha é guardada em `localStorage` quando disponível, para ser lembrada em visitas posteriores. O botão também informa seu estado por `aria-pressed`. Além disso, os cartões têm uma transição ao passar o mouse, respeitando a preferência do usuário por movimento reduzido.
+O **filtro de projetos** usa atributos `data-filter` nos botões e `data-category` nos projetos. Um evento de clique em JavaScript compara as categorias, atualiza a propriedade `hidden`, informa a quantidade exibida e define `aria-pressed` para identificar o filtro ativo. Atualmente há um único projeto, que pertence às duas categorias; por isso, ele aparece nos três filtros. Novos projetos podem ter uma ou mais categorias.
 
-## Referência
+Também foram acrescentadas uma seção independente de habilidades e outra de formação, transições nos projetos e entrada discreta das seções com `IntersectionObserver`. A preferência por movimento reduzido é respeitada. O projeto da aula já incluía informações de habilidades e formação dentro do perfil; o filtro é a principal funcionalidade inédita em relação ao exemplo.
 
-Estrutura geral inspirada no projeto [Agenda 15](https://github.com/pauloeduardoandrade/Agenda15), disponibilizado no material da disciplina.
+## Execução local
+
+Abra `index.html` em um navegador. É necessária conexão à internet para carregar o Bootstrap pela CDN. Os estilos e scripts próprios ficam em `css/style.css` e `js/script.js`.
+
+## Créditos e referências
+
+- [Projeto Agenda 15](https://github.com/pauloeduardoandrade/Agenda15): exemplo fornecido na aula.
+- [Swissfolio](https://swissfolio.netlify.app/): referência de composição visual. A implementação foi desenvolvida em HTML, CSS, JavaScript e Bootstrap.
