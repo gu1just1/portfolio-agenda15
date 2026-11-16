@@ -13,3 +13,4 @@ if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduc
  sections.forEach(section=>observer.observe(section));
 }
 document.querySelectorAll('#menuLinks .nav-link').forEach(link=>link.addEventListener('click',()=>{const menu=document.getElementById('menuLinks');if(window.bootstrap&&menu.classList.contains('show'))bootstrap.Collapse.getOrCreateInstance(menu).hide()}));
+const themeButton=document.getElementById('tema');let dark=false;try{dark=localStorage.getItem('tema')==='dark'}catch(e){}function setTheme(){document.documentElement.dataset.theme=dark?'dark':'light';themeButton.textContent=dark?'Modo claro':'Modo escuro';themeButton.setAttribute('aria-pressed',String(dark))}setTheme();themeButton.addEventListener('click',()=>{dark=!dark;setTheme();try{localStorage.setItem('tema',dark?'dark':'light')}catch(e){}});
